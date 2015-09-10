@@ -1,0 +1,17 @@
+
+table
+  tr
+    th
+    th  Name
+    th  Last Name
+    th style="color: red" Message
+  tbody
+    - @users.each_with_index do |user, index|
+      tr
+        td = index+1
+        td = user.first_name
+        td = user.last_name
+        td style="color: red" = user.message
+
+
+h2 = link_to "Get started", new_user_path

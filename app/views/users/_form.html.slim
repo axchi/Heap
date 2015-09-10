@@ -1,0 +1,23 @@
+= form_for @user do |f|
+  .form-group
+    .form-section
+      = f.label :first_name
+    = f.text_field :first_name 
+    
+  .form-group
+    .form-section
+      = f.label :last_name 
+    = f.text_field :last_name 
+    
+  .fomr-group
+    .form-section
+      = f.label :email
+    = f.text_field :email
+ 
+  .form-group
+    .form-section
+      = f.label :message
+    = f.text_area :message, size: "30x10"
+
+
+  = f.submit 
