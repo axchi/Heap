@@ -5,6 +5,13 @@ Heap::Application.routes.draw do
   # You can have the root of your site routed with "root"
    root to:  'users#index'
    resources :users, only: [:edit, :update, :new, :create]
+   
+   resources :postcards, only: [:index, :create]
+   
+   resources :postcards
+   
+   get 'users/images', to: 'users#images'
+   get 'users/templates/:name/:image', to: 'users#template', :constraints => { :image => /.*/ }
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,0 +1,10 @@
+.gallery {
+  display:inline-block;
+  width: 20%;
+  height: 120px;
+  overflow: hidden;
+}
+
+.gallery img {
+  width: 100%;
+}

@@ -1,0 +1,22 @@
+<h1>Send a Customized Postcard</h1>
+
+<%= form_for :postcards do |f| %>
+  <div class="from">
+    <label>From Name:</label><%= f.text_field :from_name %>
+    <label>From Address</label><%= f.text_field :from_address_line1 %>
+    <label>From City</label><%= f.text_field :from_city %>
+    <label>From State</label><%= f.text_field :from_state %>
+    <label>From ZIp </label><%= f.text_field :from_zip %>
+  </div>
+  <div class="to">
+    <label>To Name:</label><%= f.text_field :to_name %>
+    <label>To Address</label><%= f.text_field :to_address_line1 %>
+    <label>To City</label><%= f.text_field :to_city %>
+    <label>To State</label><%= f.text_field :to_state %>
+    <label>To Zip </label><%= f.text_field :to_zip %>
+  </div>
+  <div class="message">
+    <label>Message:</label><%= f.text_area :message %>
+  </div>
+  <%= f.submit %>
+<% end %>

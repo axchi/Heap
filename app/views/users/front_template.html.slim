@@ -1,0 +1,19 @@
+css:
+  .template-container.front {
+     width: 6.25in;
+     height: 4.25in;
+     margin: 0;
+     padding: 0;
+     /* If using an image, the background image should have dimensions of 1875x1275 pixels. */
+     background-image: url(https://afterschoolprogram.s3.amazonaws.com/images/#{params[:image]});
+     background-size: 6.25in 4.25in;
+     background-repeat: no-repeat;
+   }
+   
+
+    h2 {
+    color: yellow;}
+
+.template-container.front
+  h2 You rock, #{params[:name].titleize}!
+  

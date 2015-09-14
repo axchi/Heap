@@ -1,1 +1,38 @@
 =render partial: 'form'
+
+a href='#{@blah.postcards}'
+  | hey
+  
+
+= form_tag 'https://api.lob.com/v1/postcards/'  do
+  = label_tag 'address_line1'
+  = text_field_tag 'to[address_line1]', "blah"
+  =submit_tag
+  
+= params[:address].inspect
+=params[:addres_line1].inspect
+
+
+
+p =@lob['description']
+p to 
+p =@lob['to']['name']="different"
+p =@lob['to']['address_line1']= params[:address]
+p =@lob['to']['address_line2']
+p =@lob['to']['address_city']
+p =@lob['to']['address_state']
+p =@lob['to']['address_zip']
+p from
+p =@lob['from']['name']
+p =@lob['from']['address_line1']
+p =@lob['from']['address_line2']
+p =@lob['from']['address_city']
+p =@lob['from']['address_state']
+p =@lob['from']['address_zip']
+p =@lob['message']
+p =@lob['url']
+
+
+a href="#{@lob['url']}" target="_blank"
+  | preview HTML
+=@lob.inspect
